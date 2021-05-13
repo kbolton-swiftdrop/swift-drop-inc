@@ -116,7 +116,7 @@ ProductsListing.getCustomInitialProps = async ({
         contentID: product.contentID,
         name: product.fields.name,
         url,
-        category: category?.fields.title || "Uncategorized",
+        category: product.fields.category || "Uncategorized",
         imageSrc,
         imageAlt,
       };
