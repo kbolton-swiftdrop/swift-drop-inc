@@ -35,6 +35,7 @@ const FeaturedProduct = ({ module }) => {
               <div className="h-64 sm:h-96 relative">
                 <Image
                   src={featuredProduct.fields.thumbnail.url}
+                  alt={featuredProduct.fields.thumbnail.alt}
                   className="object-cover object-center rounded-t-lg sm:rounded-l-lg sm:rounded-t-none"
                   layout="fill"
                 />
