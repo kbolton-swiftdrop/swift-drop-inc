@@ -33,12 +33,21 @@ const FeaturedProduct = ({ module }) => {
           <Link href={href} as={`/blog/${featuredProduct.fields.product_id}`}>
             <a className="cursor-pointer">
               <div className="h-64 sm:h-96 relative">
-                <Image
-                  src={featuredProduct.fields.thumbnail?.url}
-                  alt={featuredProduct.fields.thumbnail?.alt}
-                  className="object-cover object-center rounded-t-lg sm:rounded-l-lg sm:rounded-t-none"
-                  layout="fill"
-                />
+                {featuredProduct.fields.thumbnail ? (
+                  <Image
+                    src={featuredProduct.fields.thumbnail?.url}
+                    alt={featuredProduct.fields.thumbnail?.alt}
+                    className="object-cover object-center rounded-t-lg sm:rounded-l-lg sm:rounded-t-none"
+                    layout="fill"
+                  />
+                ) : (
+                  <Image
+                    src={featuredProduct.fields.image?.url}
+                    alt={featuredProduct.fields.image?.alt}
+                    className="object-cover object-center rounded-t-lg sm:rounded-l-lg sm:rounded-t-none"
+                    layout="fill"
+                  />
+                )}
               </div>
             </a>
           </Link>
