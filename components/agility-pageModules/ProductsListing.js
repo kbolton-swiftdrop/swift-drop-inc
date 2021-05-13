@@ -29,6 +29,7 @@ const ProductsListing = ({ module, customData }) => {
 
   return (
     <div className="relative px-8 mb-12">
+      <h1>Products</h1>
       <div className="max-w-screen-xl mx-auto">
         <div className="sm:grid sm:gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {products.map((product, index) => (
